@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --scroll-behavior: smooth!important;
+  scroll-behavior: smooth!important;
+} 
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#app {
+  animation: fade-in 1.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+
+:root {
+  background: #e5e5e5;
+}
+
+.san-serif-font {
+  font-family: 'Alfa Slab One', serif;
+}
+
+.img-wrapper{
+  position: relative;
+  overflow:hidden;
+  height:150px;
+}
+
+.img-wrapper img{
+  position: absolute;
+  top:-100%; left:0; right: 0; bottom:-100%;
+  margin: auto;
+}
+
+.coin-spin-animation-hover:hover {
+  animation: rotateY 1.5s 1 linear;
+}
+
+.coin-spin-animation-loading {
+  animation: rotateY 1.5s infinite linear;
+}
+
+@keyframes rotateY {
+  to { transform: rotateY(360deg); }
+}
+
+.work-card-img-container {
+  height: 400px;
+}
+
+
+
