@@ -73,7 +73,7 @@ export const MobileMenu = ({
     <button
       aria-label="Open the menu"
       className="relative group"
-      onClick={() => setIsMobileMenuOpen((prevState) => !prevState)}
+      onClick={() => setIsMobileMenuOpen(() => !isMobileMenuOpen)}
     >
       <div className="relative flex overflow-hidden items-center justify-center rounded-lg w-[50px] h-[50px] transform transition-all bg-stone-800 ring-0 ring-stone-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
         <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
@@ -93,14 +93,12 @@ export const MobileMenu = ({
       <div className="absolute bg-stone-800 top-16 right-0 border-4 border-stone-700 rounded-lg">
         <ul
           className="flex w-60 flex-col list-none px-8 py-4"
-          onClick={setIsMobileMenuOpen((prevState) => !prevState)}
+          onClick={() => setIsMobileMenuOpen((prevState) => !prevState)}
         >
           {navigationMenuLinks.map(({ label, href, isExternal }) => (
             <li
-              onClick={(e) => {
-                !isExternal && smoothScrollHandler(e, href);
-                setIsMobileMenuOpen((prevState) => !prevState);
-              }}
+              onClick={(e) => 
+                !isExternal && smoothScrollHandler(e, href)}
               className="border-stone-700 w-full my-1 py-3 hover:border-stone-100 border-4 text-center rounded-lg bg-stone-900 hover:bg-stone-600 text-stone-200 transition-all"
               key={label}
             >
