@@ -94,7 +94,7 @@ const Modal = ({
               </div>
               <button
                 onClick={closeModal}
-                className="border-stone-300 px-8 font-sans font-semibold hover:border-stone-100 border-4 py-3 my-2 text-center rounded-lg lg:w-full bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-stone-200 transition-all"
+                className="border-stone-300 px-8 font-sans font-semibold hover:border-stone-100 active:border-stone-300 border-4 py-3 my-2 text-center rounded-lg lg:w-full bg-stone-100 hover:bg-stone-900 active:bg-stone-500 text-stone-700 hover:text-stone-200 transition-all"
               >
                 Close Project
               </button>

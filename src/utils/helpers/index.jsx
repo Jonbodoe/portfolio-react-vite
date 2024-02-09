@@ -79,7 +79,7 @@ export const navigationMenuLinks = [
     id: 2,
     label: "Resume",
     isExternal: true,
-    href: "./../src/resume.html",
+    href: `${window.location}/src/resume.html`,
   },
 ];
 

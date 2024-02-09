@@ -61,5 +61,33 @@ dialog::backdrop {
   height: 400px;
 }
 
+button.work-categories:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
 
+button.work-categories:not(:first-child):not(:last-child) {
+  border-right: 0;
+  border-left: 0;
+}
 
+button.work-categories:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (min-width: 360px) {
+  .work-categories-container {
+    bottom: -30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .work-categories-container {
+    bottom: -50px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .work-categories-container {
+    bottom: -100px;
+  }
+}

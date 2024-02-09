@@ -13,8 +13,8 @@ const WorksSection = ({
 }) => {
   const selectedWorkCategoryClass = (id) =>
     selectedWorkCategoryId === id
-      ? "flex-1 bg-stone-900 text-stone-200 rounded-tl-lg rounded-tr-lg"
-      : "flex-1 bg-stone-100 text-stone-700 -translate-y-8 rounded-lg border-4 border-stone-300 opacity-75";
+      ? "bg-stone-800 text-stone-200 border-stone-700"
+      : "bg-stone-100 text-stone-700 border-stone-300";
 
   const { label: workCategoryTitle } = workCategories.find(
     ({ id }) => id === selectedWorkCategoryId
@@ -22,8 +22,8 @@ const WorksSection = ({
 
   return (
     <>
-      <div className="flex justify-center items-center p-8">
-        <div className="w-full lg:w-7/12 bg-stone-200 rounded-lg lg:px-8 pt-8 pb-6">
+      <div className="flex justify-center items-center px-8">
+        <div className="w-full lg:w-7/12 bg-stone-200 rounded-lg lg:px-8">
           <h2 className="san-serif-font text-4xl font-semibold text-stone-800 pb-2">
             Checkout My Projects!
           </h2>
@@ -33,14 +33,14 @@ const WorksSection = ({
           <p className="font-sans text-stone-700 pb-8">{workDescription}</p>
         </div>
       </div>
-      <div className="flex justify-around gap-2 lg:gap-8 px-4 lg:px-8 pt-24 h-2/4">
+      <div className="flex justify-center px-8 h-2/4 relative work-categories-container">
         {workCategories.map(({ label, src, id }) => (
           <button
             key={id}
             tabIndex="0"
             className={`${selectedWorkCategoryClass(
               id
-            )} px-4 lg:px-8 py-6 transition-all z-10`}
+            )} px-4 lg:px-8 py-6 transition-all work-categories border-4 flex-1`}
             onClick={() => setSelectedWorkCategoryId(id)}
           >
             <div className="text-md lg:text-xl font-bold pb-4">{label}</div>
@@ -50,7 +50,7 @@ const WorksSection = ({
           </button>
         ))}
       </div>
-      <div className="bg-stone-900 h-full w-full px-8">
+      <div className="bg-stone-900 h-full w-full px-8 lg:pt-24">
         <div className="flex justify-center py-24">
           <h2 className="san-serif-font text-4xl text-stone-200">
             {workCategoryTitle}

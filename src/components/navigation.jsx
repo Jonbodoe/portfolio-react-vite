@@ -9,6 +9,7 @@ const Navigation = ({
   isMobileMenuOpen,
   setIsMobileMenuOpen,
 }) => {
+  console.log(window.location);
   return (
     <>
       <nav className="w-full z-50 lg:border-r-4 border-stone-700 absolute lg:inset-y-0 left-0 h-auto lg:relative lg:w-1/6 bg-stone-900 lg:h-lvh flex justify-between lg:justify-center items-center lg:flex-col">
@@ -26,13 +27,13 @@ const Navigation = ({
           />
         </div>
         <div className="lg:flex hidden w-full lg:bg-stone-800 lg:my-4 my-2 border-stone-700 lg:border-y-4">
-          <ul className="flex w-full lg:flex-col flex-row list-none px-4 lg:py-4">
+          <div className="flex w-full lg:flex-col flex-row list-none px-4 lg:py-4">
             {navigationMenuLinks.map(({ label, href, isExternal }) => (
-              <li
+              <button
                 {...(!isExternal && {
                   onClick: (e) => smoothScrollHandler(e, href),
                 })}
-                className="border-stone-700 px-8 hover:border-stone-100 border-4 p-2 mx-2 lg:py-3 lg:my-2 text-center rounded-lg bg-stone-900 hover:bg-stone-600 text-stone-200 transition-all"
+                className="border-stone-700 active:bg-stone-700 hover:border-stone-100 active:border-stone-400 px-8 lg:py-3 p-2 border-4 mx-2 lg:my-2 text-center rounded-lg bg-stone-900 hover:bg-stone-600 text-stone-200 transition-all"
                 key={label}
               >
                 <a
@@ -43,16 +44,16 @@ const Navigation = ({
                 >
                   {label}
                 </a>
-              </li>
+              </button>
             ))}
-          </ul>
+          </div>
         </div>
         <div className="w-full lg:flex hidden">
           <ul className="px-8 w-full lg:py-3 flex flex-wrap lg:justify-between">
             {socialMenuLinks.map(({ label, icon, href }) => (
               <li key={label} className="">
                 <a href={href} target="_blank" rel="noreferrer">
-                  <BrandIcons icon={icon} label={label} />
+                  <BrandIcons  isToolTip icon={icon} label={label} />
                 </a>
               </li>
             ))}
