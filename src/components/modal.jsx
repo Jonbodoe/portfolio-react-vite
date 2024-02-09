@@ -86,10 +86,12 @@ const Modal = ({
                   </h4>
                 )}
               </div>
-              <div className="flex gap-4 flex-wrap pb-6">
+              <div className="flex flex-wrap pb-6">
                 {Boolean(technologyStack?.length) &&
                   technologyStack?.map(({ id, src, label }) => (
-                    <BrandIcons key={id} icon={src} label={label} />
+                    <div key={id} className="mr-4 mb-2">
+                      <BrandIcons isToolTip icon={src} label={label} />
+                    </div>
                   ))}
               </div>
               <button
