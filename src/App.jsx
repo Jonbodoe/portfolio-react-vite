@@ -1,9 +1,6 @@
 import { useState } from "react";
 import Navigation from "./components/navigation";
-import {
-  landingDescription,
-  workDescription,
-} from "./utils/constants";
+import { landingDescription, workDescription } from "./utils/constants";
 import {
   navigationMenuLinks,
   portfolioWorks,
@@ -36,12 +33,12 @@ function App() {
         portfolioWorkId={portfolioWorkId}
       />
       <div className="relative h-screen flex bg-stone-200">
-          <Navigation
-            navigationMenuLinks={navigationMenuLinks}
-            socialMenuLinks={socialMenuLinks}
-            isMobileMenuOpen={isMobileMenuOpen}
-            setIsMobileMenuOpen={setMobileMenuOpen}
-          />
+        <Navigation
+          navigationMenuLinks={navigationMenuLinks}
+          socialMenuLinks={socialMenuLinks}
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setMobileMenuOpen}
+        />
         <main role="main" className="w-full lg:w-5/6 h-screen overflow-y-auto">
           <section id="About" className="md:flex">
             <LandingSection landingDescription={landingDescription} />
@@ -58,7 +55,7 @@ function App() {
             />
           </section>
           <footer className="bg-stone-900">
-            <FooterSection/>
+            <FooterSection />
           </footer>
         </main>
       </div>
