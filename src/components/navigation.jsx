@@ -53,7 +53,7 @@ const Navigation = ({
             {socialMenuLinks.map(({ label, icon, href }) => (
               <li key={label} className="">
                 <a href={href} target="_blank" rel="noreferrer">
-                  <BrandIcons  isToolTip icon={icon} label={label} />
+                  <BrandIcons isToolTip icon={icon} label={label} />
                 </a>
               </li>
             ))}
@@ -98,8 +98,7 @@ export const MobileMenu = ({
         >
           {navigationMenuLinks.map(({ label, href, isExternal }) => (
             <li
-              onClick={(e) => 
-                !isExternal && smoothScrollHandler(e, href)}
+              onClick={(e) => !isExternal && smoothScrollHandler(e, href)}
               className="border-stone-700 w-full my-1 py-3 hover:border-stone-100 border-4 text-center rounded-lg bg-stone-900 hover:bg-stone-600 text-stone-200 transition-all"
               key={label}
             >
