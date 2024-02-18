@@ -6,4 +6,5 @@ export const workDescription =
 export const callToActionDescription =
   "Feel free to reach out to me to collaborate on web projects or even design / illustration projects! I’m always open to exploring new technologies as well as new mediums to create art with!";
 
-export const urlPathBase = "portfolio-react-vite";
+// TODO: add back if github pages url
+// export const urlPathBase = "portfolio-react-vite";

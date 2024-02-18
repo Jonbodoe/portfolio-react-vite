@@ -4,15 +4,16 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App.jsx";
 import Resume from "./Resume.jsx";
-import { urlPathBase } from "./utils/constants/index.js";
+// TODO: add back if github pages url within paths
+// import { urlPathBase } from "./utils/constants/index.js";
 
 const router = createBrowserRouter([
   {
-    path: `${urlPathBase}/`,
+    path: `/`,
     element: <App />,
   },
   {
-    path: `${urlPathBase}/resume`,
+    path: `/resume`,
     element: <Resume />,
   },
 ]);
