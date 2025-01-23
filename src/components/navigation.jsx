@@ -51,7 +51,7 @@ const Navigation = ({
         <div className="w-full lg:flex hidden">
           <ul className="px-8 w-full lg:py-3 flex flex-wrap lg:justify-between">
             {socialMenuLinks.map(({ label, icon, href }) => (
-              <li key={label} className="">
+              <li key={label} className="pb-2">
                 <a href={href} target="_blank" rel="noreferrer">
                   <BrandIcons isToolTip icon={icon} label={label} />
                 </a>
@@ -115,7 +115,7 @@ export const MobileMenu = ({
         </ul>
         <ul className=" w-full lg:py-3 flex justify-between px-8 pb-4">
           {socialMenuLinks.map(({ label, icon, href }) => (
-            <li key={label} className="border-4 border-stone-700  rounded-full">
+            <li key={label} className="border-4 border-stone-700 rounded-full">
               <a href={href} target="_blank" rel="noreferrer">
                 <BrandIcons icon={icon} label={label} />
               </a>

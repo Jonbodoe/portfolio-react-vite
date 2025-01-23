@@ -77,9 +77,9 @@ export const navigationMenuLinks = [
   },
   {
     id: 2,
-    label: "Resume",
-    isExternal: true,
-    href: "/resume",
+    label: "Contact",
+    isExternal: false,
+    href: "#Contact",
   },
 ];
 

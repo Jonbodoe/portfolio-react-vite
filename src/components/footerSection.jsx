@@ -3,7 +3,7 @@ import callToAction from "./../assets/seeYaNextTime.png";
 
 const FooterSection = () => (
   <>
-    <div className="md:flex py-10 lg:h-2/3 px-10">
+    <div id="Contact" className="md:flex py-10 lg:h-2/3 px-10">
       <div className="lg:w-2/4">
         <img
           className="w-100 h-auto pb-10"
@@ -17,6 +17,7 @@ const FooterSection = () => (
             Let&apos;s Work Together!
           </h3>
           <p className="text-stone-400 pb-8">{callToActionDescription}</p>
+          <p className="text-stone-400 pb-8">For more information, please reach out to me through my email! <span className="text-red-500">Jonledev@gmail.com</span></p>
         </div>
       </div>
     </div>
