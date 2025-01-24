@@ -26,7 +26,6 @@ const LandingSection = ({ landingDescription }) => (
       <div className="flex lg:items-end items-center">
         <img
           src={landing}
-          loading="lazy"
           className="lg:w-full h-auto"
           alt="graphic illustration of a coder"
         />
